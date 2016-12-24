@@ -10,16 +10,27 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bigkoo.pickerview.TimePickerView;
+import com.facebook.stetho.Stetho;
 import com.loonggg.alarmmanager.clock.view.SelectRemindCyclePopup;
 import com.loonggg.alarmmanager.clock.view.SelectRemindWayPopup;
 import com.loonggg.lib.alarmmanager.clock.AlarmManagerUtil;
+import com.uphyca.stetho_realm.RealmInspectorModulesProvider;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
+import java.util.regex.Pattern;
+
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
+import io.realm.RealmResults;
+import rx.Observable;
+import rx.Subscriber;
+import rx.functions.Func1;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    protected Button btnQuery;
     private TextView date_tv;
     private TimePickerView pvTime;
     private RelativeLayout repeat_rl, ring_rl;
@@ -34,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        super.setContentView(R.layout.activity_main);
         allLayout = (LinearLayout) findViewById(R.id.all_layout);
         set_btn = (Button) findViewById(R.id.set_btn);
         set_btn.setOnClickListener(this);
@@ -65,7 +76,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 pvTime.show();
             }
         });
-
+        Realm.init(this);
+        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder().name("alarm").build();
+        Realm.setDefaultConfiguration(realmConfiguration);
+        Stetho.initialize(
+                Stetho.newInitializerBuilder(this)
+                        .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+                        .enableWebKitInspector(RealmInspectorModulesProvider.builder(this).databaseNamePattern(Pattern.compile("alarm")).build())
+                        .build());
+        initView();
     }
 
     public static String getTime(Date date) {
@@ -75,6 +94,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        if (view.getId() == R.id.btn_query) {
+            Realm realm = Realm.getDefaultInstance();
+            realm.where(AlarmBean.class).findAllAsync().asObservable()
+                    .flatMap(new Func1<RealmResults<AlarmBean>, Observable<AlarmBean>>() {
+                        @Override
+                        public Observable<AlarmBean> call(RealmResults<AlarmBean> alarmBeen) {
+                            Log.i(TAG, "size: " + alarmBeen.size());
+                            return Observable.from(alarmBeen);
+                        }
+                    })
+                    .subscribe(new Subscriber<AlarmBean>() {
+                        @Override
+                        public void onCompleted() {
+
+                        }
+
+                        @Override
+                        public void onError(Throwable e) {
+
+                        }
+
+                        @Override
+                        public void onNext(AlarmBean alarmBean) {
+                            Log.i(TAG, "alarmBean: " + alarmBean.toString());
+
+                        }
+                    });
+        }
         switch (view.getId()) {
             case R.id.repeat_rl:
                 selectRemindCycle();
@@ -109,8 +156,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            }
 //            Toast.makeText(this, "闹钟设置成功", Toast.LENGTH_LONG).show();
 //        }
+
         long timeInMillis = Calendar.getInstance().getTimeInMillis() + 1000;
-        int id = new Random(1000).nextInt();
+        int id = new Random().nextInt(1000);
         Log.i(TAG, "setClock: timeInMillis " + timeInMillis);
         Log.i(TAG, "setClock: id " + id);
         AlarmManagerUtil.setAlarm(this, timeInMillis, "hahh", id);
@@ -279,4 +327,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return flag == 0 ? cycle : weeks;
     }
 
+    private void initView() {
+        btnQuery = (Button) findViewById(R.id.btn_query);
+        btnQuery.setOnClickListener(MainActivity.this);
+        allLayout = (LinearLayout) findViewById(R.id.all_layout);
+    }
 }

@@ -33,12 +33,13 @@ public class AlarmManagerUtil {
 
     /**
      * 设置闹钟
+     *
      * @param context
      * @param timeInMillis 提醒时间戳
-     * @param tips 提示参数
-     * @param id 标志id
+     * @param tips         提示参数
+     * @param id           标志id
      */
-    public static void setAlarm(Context context, long timeInMillis,String tips,int id) {
+    public static void setAlarm(Context context, long timeInMillis, String tips, int id) {
         AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         long intervalMillis = 0;
         Intent intent = new Intent(ALARM_ACTION);
@@ -52,8 +53,9 @@ public class AlarmManagerUtil {
             am.setWindow(AlarmManager.RTC_WAKEUP, timeInMillis,
                     intervalMillis, sender);
         } else {
-                am.set(AlarmManager.RTC_WAKEUP, timeInMillis, sender);
+            am.set(AlarmManager.RTC_WAKEUP, timeInMillis, sender);
         }
+
     }
 
 

@@ -2,11 +2,193 @@
 <items version="2" >
 
     <item
-        jar="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/exploded-aar/Android-AlarmManagerClock/alarmmanagerclock/unspecified/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/qeeniao/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.2/ccde00f7ccc77af5a6d5752e2cb21f6d8998289f/okhttp-3.4.2.jar"
+        jumboMode="true"
+        optimize="true"
         revision="23.0.3"
-        sha1="8dc195e048af26b252ef6982b4c09839faba7a5a">
-        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/pre-dexed/debug/Android-AlarmManagerClock-alarmmanagerclock-unspecified_d93796db6934f7dd2b7dd6353638516e990d0226.jar" />
+        sha1="ccde00f7ccc77af5a6d5752e2cb21f6d8998289f">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.4.2_7d453add634072c572471479f2ea57473f013ed6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_836b914093f72bd3fa49994925e650baebca5392/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_add060286a5b980c191cd18275949b06d2b649f8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_86098bf65d626d9a591240ae0474ec3ca3cb8f3d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/.gradle/caches/modules-2/files-2.1/io.realm/realm-annotations/2.1.1/d5a450f6ad58f779e924381744ecff0ef7e8d453/realm-annotations-2.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d5a450f6ad58f779e924381744ecff0ef7e8d453">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/realm-annotations-2.1.1_2f810939fdf112719a38bf0db4689cfa71fc5d2b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="aa81bfe8c5cc88c2472ca936ae71f0c3dd1766df">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/io.reactivex-rxandroid-1.0.1_b739f08db8cf0f07cccbfeabd57a39aa037e7802/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.9.0_95d2c302b53ebd227602928c2ec9f508ba71a7bc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/exploded-aar/io.realm/realm-android-library/2.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a8b6e31343b6de9a37f6d81d7fdda29b3b4a90de">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/io.realm-realm-android-library-2.1.1_a63ac5dfe3ccb9393420259ae1c1420dd1a8ae2b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_718d6e54a10facc2c953a74d88ba4ca1ca79025d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/exploded-aar/com.getkeepsafe.relinker/relinker/1.2.2/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="b64dd5f01bc37de289f90fd59299b0c76d119611">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.getkeepsafe.relinker-relinker-1.2.2_97cf32e296f9d35365be8640079bf9cad55de1d1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.0.14/898f9ab61e2a23afd615f0b0389478bec86f49f9/rxjava-1.0.14.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="898f9ab61e2a23afd615f0b0389478bec86f49f9">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/rxjava-1.0.14_2b636a77577df8d0b5f7b0562164d82043fc0677/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/exploded-aar/com.uphyca/stetho_realm/2.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4d668d438bf1a032b186b83151f4da16f32c498b">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.uphyca-stetho_realm-2.0.0_7d427da9751b819bc3c8b8a2e91ecf471ef87329/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/exploded-aar/com.facebook.stetho/stetho/1.4.2/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="32f45bd44a3e7efc235bbfed120029290f5d674a">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.facebook.stetho-stetho-1.4.2_3810394ac5f6b793cd4f88399a0b2c631dae2694/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_d35083b0c6792e694d9f6313b25302d86fd9880f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_2f093df4013c30a67c387e0006c18264fafe5a53/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/2.0.1/516c03b21d50a644d538de0f0369c620989cd8f0/jsr305-2.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="516c03b21d50a644d538de0f0369c620989cd8f0">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/jsr305-2.0.1_4c3e6ef8b623c183d506af69924c8d549bd79520/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/exploded-aar/com.bigkoo/pickerview/2.0.8/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f3f00bb9cdb0a14b0db183427d227bfd78b29ec2">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.bigkoo-pickerview-2.0.8_9c069f4a3add01eaef91bb14ab7f8cf71afa8d6e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="22a9d8330ddc6f105736da573f8b575d2367db89">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_910fc0a23d415f1f846d8fbb75ee9db726e78f9c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/exploded-aar/com.facebook.stetho/stetho-okhttp3/1.4.2/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="79c3d4a8ca3c04c5fd5a4a72d43a29fe6d3667b4">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.facebook.stetho-stetho-okhttp3-1.4.2_c56a186b21369eb2d005ca0642039fcf37d4a916/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/.gradle/caches/modules-2/files-2.1/commons-cli/commons-cli/1.2/2bf96b7aa8b611c177d329452af1dc933e14501c/commons-cli-1.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="2bf96b7aa8b611c177d329452af1dc933e14501c">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/commons-cli-1.2_cedb6b46c241e5e87eeef0fad48997d731aa6b90/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="b8ad454f50c85489f65a59b6248ce5a7c1ac84ab">
+        <dex dex="/Users/qeeniao/code/Android-AlarmManagerClock/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_e72853483d3c1900431c0155eb21807e7076cd74/classes.dex" />
     </item>
 
 </items>
