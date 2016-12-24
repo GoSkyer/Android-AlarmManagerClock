@@ -1,13 +1,13 @@
 package com.loonggg.alarmmanager.clock;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bigkoo.pickerview.TimePickerView;
 import com.loonggg.alarmmanager.clock.view.SelectRemindCyclePopup;
@@ -15,7 +15,9 @@ import com.loonggg.alarmmanager.clock.view.SelectRemindWayPopup;
 import com.loonggg.lib.alarmmanager.clock.AlarmManagerUtil;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView date_tv;
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String time;
     private int cycle;
     private int ring;
+    private String TAG = getClass().getName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,24 +91,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void setClock() {
-        if (time != null && time.length() > 0) {
-            String[] times = time.split(":");
-            if (cycle == 0) {//是每天的闹钟
-                AlarmManagerUtil.setAlarm(this, 0, Integer.parseInt(times[0]), Integer.parseInt
-                        (times[1]), 0, 0, "闹钟响了", ring);
-            } if(cycle == -1){//是只响一次的闹钟
-                AlarmManagerUtil.setAlarm(this, 1, Integer.parseInt(times[0]), Integer.parseInt
-                        (times[1]), 0, 0, "闹钟响了", ring);
-            }else {//多选，周几的闹钟
-                String weeksStr = parseRepeat(cycle, 1);
-                String[] weeks = weeksStr.split(",");
-                for (int i = 0; i < weeks.length; i++) {
-                    AlarmManagerUtil.setAlarm(this, 2, Integer.parseInt(times[0]), Integer
-                            .parseInt(times[1]), i, Integer.parseInt(weeks[i]), "闹钟响了", ring);
-                }
-            }
-            Toast.makeText(this, "闹钟设置成功", Toast.LENGTH_LONG).show();
-        }
+//        if (time != null && time.length() > 0) {
+//            String[] times = time.split(":");
+//            if (cycle == 0) {//是每天的闹钟
+//                AlarmManagerUtil.setAlarm(this, 0, Integer.parseInt(times[0]), Integer.parseInt
+//                        (times[1]), 0, 0, "闹钟响了", ring);
+//            } if(cycle == -1){//是只响一次的闹钟
+//                AlarmManagerUtil.setAlarm(this, 1, Integer.parseInt(times[0]), Integer.parseInt
+//                        (times[1]), 0, 0, "闹钟响了", ring);
+//            }else {//多选，周几的闹钟
+//                String weeksStr = parseRepeat(cycle, 1);
+//                String[] weeks = weeksStr.split(",");
+//                for (int i = 0; i < weeks.length; i++) {
+//                    AlarmManagerUtil.setAlarm(this, 2, Integer.parseInt(times[0]), Integer
+//                            .parseInt(times[1]), i, Integer.parseInt(weeks[i]), "闹钟响了", ring);
+//                }
+//            }
+//            Toast.makeText(this, "闹钟设置成功", Toast.LENGTH_LONG).show();
+//        }
+        long timeInMillis = Calendar.getInstance().getTimeInMillis() + 1000;
+        int id = new Random(1000).nextInt();
+        Log.i(TAG, "setClock: timeInMillis " + timeInMillis);
+        Log.i(TAG, "setClock: id " + id);
+        AlarmManagerUtil.setAlarm(this, timeInMillis, "hahh", id);
 
     }
 

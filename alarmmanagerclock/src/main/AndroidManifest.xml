@@ -12,10 +12,6 @@
                 <action android:name="com.loonggg.alarm.clock"/>
             </intent-filter>
         </receiver>
-        <activity
-            android:name=".ClockAlarmActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            ></activity>
     </application>
 
 </manifest>
