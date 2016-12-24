@@ -1,4 +1,4 @@
-package com.loonggg.lib.alarmmanager.clock;
+package com.loonggg.alarmmanager.clock;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -16,4 +16,8 @@ public class AlarmReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         Log.i(TAG, "onReceive: " + "收到闹钟");
     }
+
+    public void onMyReceive(Context context, Intent intent){
+
+    };
 }

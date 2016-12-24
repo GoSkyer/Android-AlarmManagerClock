@@ -24,10 +24,6 @@ import java.util.regex.Pattern;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
-import io.realm.RealmResults;
-import rx.Observable;
-import rx.Subscriber;
-import rx.functions.Func1;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     protected Button btnQuery;
@@ -96,31 +92,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if (view.getId() == R.id.btn_query) {
             Realm realm = Realm.getDefaultInstance();
-            realm.where(AlarmBean.class).findAllAsync().asObservable()
-                    .flatMap(new Func1<RealmResults<AlarmBean>, Observable<AlarmBean>>() {
-                        @Override
-                        public Observable<AlarmBean> call(RealmResults<AlarmBean> alarmBeen) {
-                            Log.i(TAG, "size: " + alarmBeen.size());
-                            return Observable.from(alarmBeen);
-                        }
-                    })
-                    .subscribe(new Subscriber<AlarmBean>() {
-                        @Override
-                        public void onCompleted() {
-
-                        }
-
-                        @Override
-                        public void onError(Throwable e) {
-
-                        }
-
-                        @Override
-                        public void onNext(AlarmBean alarmBean) {
-                            Log.i(TAG, "alarmBean: " + alarmBean.toString());
-
-                        }
-                    });
         }
         switch (view.getId()) {
             case R.id.repeat_rl:
